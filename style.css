@@ -1,0 +1,47 @@
+
+table tr:nth-child(even){
+    background-color: #eeeeee;
+}
+
+table tr:hover{
+    background-color: #ccc;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: #111;
+}
+.firstPlace{
+    color: #CBBB58
+}
+.secondPlace{
+color:#9AADBD
+}
+.thirdPlace{
+color:#C05949
+}
+.fourthPlace{
+color:#954F47
+}
+.fithPlace{
+color:#753A48
+}

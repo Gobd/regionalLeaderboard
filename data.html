@@ -1,0 +1,155 @@
+<table class="pure-table">
+    <thead>
+        <tr>
+            <td>
+                Overall
+            </td>
+
+            <td>
+                Name
+            </td>
+            <td>
+                Region Finish
+            </td>
+            <td>
+                Points
+            </td>
+            <td>
+                Event 1
+            </td>
+            <td>
+                Event 2
+            </td>
+            <td>
+                Event 3
+            </td>
+            <td>
+                Event 4
+            </td>
+            <td>
+                Event 5
+            </td>
+            <td>
+                Event 6
+            </td>
+            <td>
+                Event 7
+            </td>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat='men in Men| orderBy:" points"' ng-switch="men.Competitor.place">
+            <td>
+                {{$index + 1}}
+            </td>
+            <td ng-switch-default>
+                {{men.Competitor.name}}
+
+            </td>
+            <td ng-switch-when="1" class = "firstPlace" >
+                {{men.Competitor.name}}
+
+            </td>
+            <td ng-switch-when="2" class = "secondPlace" >
+                {{men.Competitor.name}}
+
+            </td>
+            <td ng-switch-when="3" class = "thirdPlace" >
+                {{men.Competitor.name}}
+
+            </td>
+            <td ng-switch-when="4" class = "fourthPlace" >
+                {{men.Competitor.name}}
+
+            </td>
+            <td ng-switch-when="5" class = "fithPlace" >
+                {{men.Competitor.name}}
+
+            </td>
+            <td ng-switch-default>
+                <ng-pluralize count='men.Competitor.place' when="{'1':' 1st','2':'2nd','3':'3rd',
+                         'other':'{}th'
+                     }"> </ng-pluralize>
+
+            </td>
+            <td ng-switch-when="1" class = "firstPlace" >
+                <ng-pluralize count='men.Competitor.place' when="{'1':' 1st','2':'2nd','3':'3rd',
+                         'other':'{}th'
+                     }"> </ng-pluralize>
+
+            </td>
+            <td ng-switch-when="2" class = "secondPlace" >
+                <ng-pluralize count='men.Competitor.place' when="{'1':' 1st','2':'2nd','3':'3rd',
+                         'other':'{}th'
+                     }"> </ng-pluralize>
+
+            </td>
+            <td ng-switch-when="3" class = "thirdPlace" >
+                <ng-pluralize count='men.Competitor.place' when="{'1':' 1st','2':'2nd','3':'3rd',
+                         'other':'{}th'
+                     }"> </ng-pluralize>
+
+            </td>
+            <td ng-switch-when="4" class = "fourthPlace" >
+                <ng-pluralize count='men.Competitor.place' when="{'1':' 1st','2':'2nd','3':'3rd',
+                         'other':'{}th'
+                     }"> </ng-pluralize>
+
+            </td>
+            <td ng-switch-when="5" class = "fithPlace" >
+                <ng-pluralize count='men.Competitor.place' when="{'1':' 1st','2':'2nd','3':'3rd',
+                         'other':'{}th'
+                     }"> </ng-pluralize>
+
+            </td>
+            
+            <td>
+                {{men.points}}
+            </td>
+            <td>
+                <ng-pluralize count='men.event1' when="{'1':' 1 pt',
+                         'other':'{} pts'
+                     }"> </ng-pluralize>
+                <br> {{men.Event01.time}}
+            </td>
+            <td>
+                <ng-pluralize count='men.event2' when="{'1':' 1 pt',
+                             'other':'{} pts'
+                         }"> </ng-pluralize>
+                <br> {{men.Event02.time}}
+
+            </td>
+            <td>
+                <ng-pluralize count='men.event3' when="{'1':' 1 pt',
+                             'other':'{} pts'
+                         }"> </ng-pluralize>
+                <br> {{men.Event03.time}}
+            </td>
+            <td>
+                <ng-pluralize count='men.event4' when="{'1':' 1 pt',
+                             'other':'{} pts'
+                         }"> </ng-pluralize>
+                <br> {{men.Event04.time}}
+            </td>
+            <td>
+                <ng-pluralize count='men.event5' when="{'1':' 1 pt',
+                             'other':'{} pts'
+                         }"> </ng-pluralize>
+                <br> {{men.Event05.time}}
+            </td>
+            <td>
+                <ng-pluralize count='men.event6' when="{'1':' 1 pt',
+                             'other':'{} pts'
+                         }"> </ng-pluralize>
+                <br> {{men.Event06.time}}
+            </td>
+            <td>
+                <ng-pluralize count='men.event7' when="{'1':' 1 pt',
+                             'other':'{} pts'
+                         }"> </ng-pluralize>
+                <br> {{men.Event07.time}}
+            </td>
+        </tr>
+    </tbody>
+</table>
